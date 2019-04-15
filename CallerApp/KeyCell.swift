@@ -14,6 +14,14 @@ class KeyCell: UICollectionViewCell {
     let digitsLabel = UILabel()
     let lettersLabel = UILabel()
     
+    override var isHighlighted: Bool {
+        didSet{
+            backgroundColor = isHighlighted ? .darkGray : defaultColor
+            digitsLabel.textColor = isHighlighted ? .white : .black
+            lettersLabel.textColor = isHighlighted ? .white : .black
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = defaultColor

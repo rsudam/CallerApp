@@ -14,6 +14,8 @@
 		8EA00AC72264D12000030449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA00AC52264D12000030449 /* LaunchScreen.storyboard */; };
 		8EA00ACF2264D94D00030449 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00ACE2264D94D00030449 /* KeyCell.swift */; };
 		8EA00AD12264DA4A00030449 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00AD02264DA4A00030449 /* UIView+Layout.swift */; };
+		8EA00AD32264DC8C00030449 /* HeaderDialedNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00AD22264DC8C00030449 /* HeaderDialedNumbers.swift */; };
+		8EA00AD52264E16A00030449 /* GreenDialButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00AD42264E16A00030449 /* GreenDialButtonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8EA00AC82264D12000030449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EA00ACE2264D94D00030449 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 		8EA00AD02264DA4A00030449 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		8EA00AD22264DC8C00030449 /* HeaderDialedNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDialedNumbers.swift; sourceTree = "<group>"; };
+		8EA00AD42264E16A00030449 /* GreenDialButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenDialButtonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				8EA00AC52264D12000030449 /* LaunchScreen.storyboard */,
 				8EA00AC82264D12000030449 /* Info.plist */,
 				8EA00ACE2264D94D00030449 /* KeyCell.swift */,
+				8EA00AD22264DC8C00030449 /* HeaderDialedNumbers.swift */,
+				8EA00AD42264E16A00030449 /* GreenDialButtonCell.swift */,
 			);
 			path = CallerApp;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA00AD12264DA4A00030449 /* UIView+Layout.swift in Sources */,
+				8EA00AD52264E16A00030449 /* GreenDialButtonCell.swift in Sources */,
+				8EA00AD32264DC8C00030449 /* HeaderDialedNumbers.swift in Sources */,
 				8EA00ACF2264D94D00030449 /* KeyCell.swift in Sources */,
 				8EA00ABF2264D11D00030449 /* ViewController.swift in Sources */,
 				8EA00ABD2264D11D00030449 /* AppDelegate.swift in Sources */,
