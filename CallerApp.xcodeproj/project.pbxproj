@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E59A80322661A5200B96AFC /* BackspaceButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59A80222661A5200B96AFC /* BackspaceButtonCell.swift */; };
 		8EA00ABD2264D11D00030449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00ABC2264D11D00030449 /* AppDelegate.swift */; };
 		8EA00ABF2264D11D00030449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA00ABE2264D11D00030449 /* ViewController.swift */; };
 		8EA00AC22264D11D00030449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA00AC02264D11D00030449 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E59A80222661A5200B96AFC /* BackspaceButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackspaceButtonCell.swift; sourceTree = "<group>"; };
 		8EA00AB92264D11D00030449 /* CallerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA00ABC2264D11D00030449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA00ABE2264D11D00030449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				8EA00ACE2264D94D00030449 /* KeyCell.swift */,
 				8EA00AD22264DC8C00030449 /* HeaderDialedNumbers.swift */,
 				8EA00AD42264E16A00030449 /* GreenDialButtonCell.swift */,
+				8E59A80222661A5200B96AFC /* BackspaceButtonCell.swift */,
 			);
 			path = CallerApp;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				8EA00ACF2264D94D00030449 /* KeyCell.swift in Sources */,
 				8EA00ABF2264D11D00030449 /* ViewController.swift in Sources */,
 				8EA00ABD2264D11D00030449 /* AppDelegate.swift in Sources */,
+				8E59A80322661A5200B96AFC /* BackspaceButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

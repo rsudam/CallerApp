@@ -14,6 +14,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let cellId = "cellId"
     let headerId = "headerId"
     let greenCellId = "greenCellId"
+    let backspaceCellId = "backspaceCellId"
     let numbers = [
         "1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"
     ]
@@ -31,11 +32,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.register(KeyCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(HeaderDialedNumbers.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(GreenDialButtonCell.self, forCellWithReuseIdentifier: greenCellId)
+        collectionView.register(BackspaceButtonCell.self, forCellWithReuseIdentifier: backspaceCellId)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 1
+            return 2
         }
         return numbers.count
     }
@@ -43,8 +45,19 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: greenCellId, for: indexPath) as! GreenDialButtonCell
-            return cell
+            if indexPath.item == 0 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: greenCellId, for: indexPath) as! GreenDialButtonCell
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: backspaceCellId, for: indexPath) as! BackspaceButtonCell
+                
+                if dialedNumbers == "" {
+                    cell.imageView.isHidden = true
+                } else {
+                    cell.imageView.isHidden = false
+                }
+                return cell
+            }
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! KeyCell
@@ -62,7 +75,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         if section == 1 {
             let padding = view.frame.width / 2 - cellWidth / 2
-            return .init(top: 16, left: padding, bottom: 0, right: 0)
+            return .init(top: 16, left: padding, bottom: 0, right: leftRightPadding)
         } else {
             return .init(top: 16, left: leftRightPadding, bottom: 0, right: leftRightPadding)
         }
@@ -86,9 +99,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            return
+            if indexPath.item == 1 {
+                dialedNumbers = String(dialedNumbers.dropLast())
+            }
+        } else {
+            dialedNumbers += numbers[indexPath.item]
         }
-        dialedNumbers += numbers[indexPath.item]
         collectionView.reloadData()
     }
     
